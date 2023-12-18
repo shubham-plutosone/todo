@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home_shimmer_effect.module.scss";
-import ShimmerEffects from "../BannerAndCards/CampaignShimmerEffects";
+import ShimmerEffects from "../ForCampaigns/CampaignShimmerEffects";
 
 const HomeShimmerEffect = () => {
   return (
@@ -18,7 +18,7 @@ const HomeShimmerEffect = () => {
           </div>
         </div>
         {/* Recharge and bill pay */}
-        <div className={styles.forCards} style={{display:"none"}}>
+        <div className={styles.forCards}>
           <div className={`${styles.heading} ${styles.commanForCards}`}>
             <div className={styles.shimmerEffect}></div>
           </div>
