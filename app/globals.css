@@ -5,3 +5,16 @@
 body {
   background: #f4f8fe;
 }
+
+/* When using Part Wise Css */
+.maiHoonContainer {
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 20px 45px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .maiHoonContainer {
+    padding: 10px 10px;
+  }
+}
