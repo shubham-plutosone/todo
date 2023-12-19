@@ -1,0 +1,281 @@
+// ! Shimmer Effect...
+.shimmer {
+  background-color: #e5e6ea;
+  width: 100%;
+  height: 100%;
+
+  .shimmerBody {
+    background-color: #e5e6ea;
+    background-image: linear-gradient(
+      to right,
+      #e5e6ea 0%,
+      #e2e2e2 20%,
+      #edeeef 40%,
+      #d0d4d9 100%
+    );
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    animation: lighting 3s forwards ease-in-out infinite;
+  }
+  @keyframes lighting {
+    0% {
+      background-position: 1vw;
+    }
+
+    100% {
+      background-position: 100vw;
+      transition: all 1s ease-in-out;
+    }
+  }
+}
+
+// ! For Banner...
+.banner {
+  // ! For Desk
+  .bannerBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    height: calc(
+      min(300px, 223px + (300 - 223) * ((100vw - 768px) / (1440 - 768)))
+    );
+    .common {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .banner_1 {
+      width: 62.2%;
+    }
+    .banner_2 {
+      width: 35.6%;
+    }
+  }
+
+  // ! For Phone
+  .bannerPhone {
+    display: none;
+    .heading {
+      margin-bottom: 5px;
+    }
+    .common {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .banner_1 {
+      width: 100%;
+      height: calc(
+        min(180px, 80px + (180 - 80) * ((100vw - 320px) / (767 - 320)))
+      );
+      margin-bottom: 20px;
+    }
+    .banner_2 {
+      width: 100%;
+      height: calc(
+        min(180px, 160px + (180 - 160) * ((100vw - 320px) / (767 - 320)))
+      );
+    }
+  }
+}
+
+// !  Heading/Paragraph...
+.heading {
+  width: 320px;
+  height: calc(min(26px, 18px + (26 - 18) * ((100vw - 768px) / (1440 - 768))));
+  border-radius: 8px;
+  overflow: hidden;
+}
+.paragraph {
+  width: 220px;
+  height: calc(min(18px, 12px + (18 - 12) * ((100vw - 768px) / (1440 - 768))));
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1025px) {
+  .heading {
+    width: 200px;
+  }
+  .paragraph {
+    width: 100px;
+  }
+}
+
+// !  Small Cards...
+.smallCards {
+  // ! For Desk...
+  .smallCardBoxDesk {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 1.5%;
+    grid-row-gap: 16px;
+    overflow: hidden;
+
+    .card {
+      width: calc(
+        min(151px, 85px + (151 - 85) * ((100vw - 768px) / (1440 - 768)))
+      );
+      height: calc(
+        min(180px, 128px + (180 - 128) * ((100vw - 768px) / (1440 - 768)))
+      );
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+
+  // ! For Phone...
+  .phoneSmallCards {
+    display: none;
+    border-radius: 12px;
+    overflow: hidden;
+    .box {
+      width: 100%;
+      height: calc(
+        min(320px, 195px + (320 - 195) * ((100vw - 320px) / (768 - 320)))
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 12px;
+      background-color: #e5e6ea80;
+
+      .common {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .circleParent {
+        display: flex;
+        flex-direction: column;
+
+        .circleParagraph {
+          width: calc(
+            min(151px, 85px + (151 - 85) * ((100vw - 768px) / (1440 - 768)))
+          );
+          overflow: hidden;
+          border-radius: 8px;
+          margin-top: 5px;
+        }
+      }
+      .circleBox {
+        display: inline-block;
+        width: calc(40px + (142 - 40) * (100vw - 320px) / (1440 - 320));
+        height: calc(40px + (142 - 40) * (100vw - 320px) / (1440 - 320));
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.bottomBannerParent {
+  margin-top: 20px;
+
+  .bottomBannerForDesk {
+    display: flex;
+    height: 250px;
+    gap: 20px;
+  }
+
+  .bottomBannerForPhone {
+    display: none;
+    height: calc(
+      min(170px, 77.33px + (339 - 77.33) * ((100vw - 320px) / (1440 - 320)))
+    );
+    gap: 10px;
+
+    .bottomBannerPhoneChild {
+      height: 100%;
+      width: 50%;
+      background-color: #e5e6ea;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+
+  .bottomBanner {
+    background-color: #e5e6ea;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .bottomBanner_1 {
+    height: 100%;
+    width: 50%;
+  }
+
+  .bottomBanner_2_Parent {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .bottomBanner_2_child_1 {
+      height: 50%;
+      width: 100%;
+    }
+    .bottomBanner_2_child_2 {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      gap: 10px;
+      .bottomBanner_2_child_3 {
+        height: 100%;
+        width: 50%;
+      }
+      .bottomBanner_2_child_4 {
+        height: 100%;
+        width: 50%;
+      }
+    }
+  }
+
+  .HeadPara {
+    margin-top: 10px;
+    .head {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// !  Hide/Visible on Phone..
+@media only screen and (max-width: 767px) {
+  .banner {
+    .bannerBox {
+      display: none;
+    }
+    .bannerPhone {
+      display: block;
+    }
+  }
+  .deskHeadingParagraph {
+    display: none;
+  }
+
+  .smallCards {
+    .smallCardBoxDesk {
+      display: none;
+    }
+    .phoneSmallCards {
+      display: block;
+    }
+  }
+
+  .bottomBannerParent {
+    .bottomBannerForDesk {
+      display: none;
+    }
+    .bottomBannerForPhone {
+      display: flex;
+    }
+  }
+}
